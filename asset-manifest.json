@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kirana-review/static/css/main.682678c3.chunk.css",
+    "main.js": "/kirana-review/static/js/main.cb185cdc.chunk.js",
+    "main.js.map": "/kirana-review/static/js/main.cb185cdc.chunk.js.map",
+    "runtime-main.js": "/kirana-review/static/js/runtime-main.6ce25472.js",
+    "runtime-main.js.map": "/kirana-review/static/js/runtime-main.6ce25472.js.map",
+    "static/js/2.675e6756.chunk.js": "/kirana-review/static/js/2.675e6756.chunk.js",
+    "static/js/2.675e6756.chunk.js.map": "/kirana-review/static/js/2.675e6756.chunk.js.map",
+    "index.html": "/kirana-review/index.html",
+    "precache-manifest.e6b8953df530a25607d953b831c480a6.js": "/kirana-review/precache-manifest.e6b8953df530a25607d953b831c480a6.js",
+    "service-worker.js": "/kirana-review/service-worker.js",
+    "static/css/main.682678c3.chunk.css.map": "/kirana-review/static/css/main.682678c3.chunk.css.map",
+    "static/js/2.675e6756.chunk.js.LICENSE.txt": "/kirana-review/static/js/2.675e6756.chunk.js.LICENSE.txt",
+    "static/media/App.module.css": "/kirana-review/static/media/grocer-bg.f1565ac2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ce25472.js",
+    "static/js/2.675e6756.chunk.js",
+    "static/css/main.682678c3.chunk.css",
+    "static/js/main.cb185cdc.chunk.js"
+  ]
+}
