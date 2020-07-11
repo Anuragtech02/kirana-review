@@ -22,6 +22,8 @@
           align-items: center;
   min-height: 100vh;
   background-image: url(assets/grocer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
