@@ -1,0 +1,9 @@
+@import "../common.scss";
+
+.conatiner {
+  display: flex;
+  justify-content: space-between;
+  min-height: 8vh;
+  width: --fixedWidth;
+  margin: auto;
+}

@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  :root {
+    --primaryColor: #009f7f;
+    --accentColor: #fff;
+    --fixedWidth: 70%;
+  }
 }
 .container {
   display: flex;
