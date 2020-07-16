@@ -6,4 +6,15 @@
   min-height: 8vh;
   width: --fixedWidth;
   margin: auto;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .navLink {
+    text-decoration: none;
+    list-style: none;
+  }
 }
