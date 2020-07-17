@@ -3,33 +3,14 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-* :root {
+:root {
   --primaryColor: #009f7f;
   --accentColor: #fff;
+  --fontLight: #8b8b8b;
   --fixedWidth: 70%;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-  background-image: url(assets/grocer-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 h1 {
@@ -37,5 +18,11 @@ h1 {
   letter-spacing: 10px;
   text-transform: uppercase;
   font-weight: 900 !important;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=App.module.css.map */

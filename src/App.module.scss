@@ -2,26 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  :root {
-    --primaryColor: #009f7f;
-    --accentColor: #fff;
-    --fixedWidth: 70%;
-  }
+  font-family: "Poppins", sans-serif;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url(assets/grocer-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+:root {
+  --primaryColor: #009f7f;
+  --accentColor: #fff;
+  --fontLight: #8b8b8b;
+  --fixedWidth: 70%;
 }
+
 h1 {
   font-size: 3rem;
   letter-spacing: 10px;
   text-transform: uppercase;
   font-weight: 900 !important;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

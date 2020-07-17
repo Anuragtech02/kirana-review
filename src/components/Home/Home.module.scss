@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../../assets/grocer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.heading {
+  text-align: center;
+  h1 {
+    font-weight: 300 !important;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1rem;
+    color: var(--fontLight);
+    margin: 10px auto;
+  }
+}
+.search {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  background: white;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 2px 5px 30px rgba(75, 75, 75, 0.1);
+  .title {
+    padding: 5px 10px;
+    margin-right: 10px;
+    h4 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      padding: 10px 10px;
+      background: rgba(163, 163, 163, 0.1);
+      border-radius: 5px;
+    }
+  }
+  .input {
+    margin-right: 10px;
+
+    input {
+      padding: 5px;
+      min-width: 25rem;
+      border: none;
+      outline: none !important;
+    }
+  }
+  .btn {
+    button {
+      display: flex;
+      align-items: center;
+      padding: 15px 10px;
+      border-radius: 0 5px 5px 0 !important;
+      border: none !important ;
+      min-width: 10rem;
+      background: var(--primaryColor);
+      color: white;
+      justify-content: center;
+      font-weight: 600 !important;
+      svg {
+        margin-right: 5px;
+        transform: scale(0.8);
+      }
+      outline: none !important;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

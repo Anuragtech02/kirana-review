@@ -1,0 +1,111 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-image: url(../../assets/grocer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  font-weight: 300 !important;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  font-size: 2.8rem;
+}
+
+.heading p {
+  font-size: 1rem;
+  color: var(--fontLight);
+  margin: 10px auto;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  margin: 50px auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 5px 30px rgba(75, 75, 75, 0.1);
+          box-shadow: 2px 5px 30px rgba(75, 75, 75, 0.1);
+}
+
+.search .title {
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.search .title h4 {
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding: 10px 10px;
+  background: rgba(163, 163, 163, 0.1);
+  border-radius: 5px;
+}
+
+.search .input {
+  margin-right: 10px;
+}
+
+.search .input input {
+  padding: 5px;
+  min-width: 25rem;
+  border: none;
+  outline: none !important;
+}
+
+.search .btn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px;
+  border-radius: 0 5px 5px 0 !important;
+  border: none !important;
+  min-width: 10rem;
+  background: var(--primaryColor);
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600 !important;
+  outline: none !important;
+}
+
+.search .btn button svg {
+  margin-right: 5px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.search .btn button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Home.module.css.map */

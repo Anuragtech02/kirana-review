@@ -1,18 +1,22 @@
 @import "../common.scss";
 
-.conatiner {
+.container {
   display: flex;
   justify-content: space-between;
   min-height: 8vh;
-  width: --fixedWidth;
+  width: var(--fixedWidth);
   margin: auto;
   align-items: center;
 }
-
+.logo {
+  width: fit-content;
+  flex: 1;
+}
 .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 20%;
   .navLink {
     text-decoration: none;
     list-style: none;
