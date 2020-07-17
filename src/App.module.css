@@ -27,5 +27,6 @@ h1 {
   width: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  z-index: 10000;
 }
 /*# sourceMappingURL=App.module.css.map */

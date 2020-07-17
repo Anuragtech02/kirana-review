@@ -2,12 +2,11 @@ import React from "react";
 import styles from "./Home.module.css";
 import { Search } from "@material-ui/icons";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import { HorizontalSlider } from "../../components";
+import { HorizontalSlider, Product } from "../../components";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
-import { createElement } from "react";
 
 export const Home = () => {
   const images = [image1, image2, image3, image4];
@@ -43,9 +42,23 @@ export const Home = () => {
           <ArrowDownwardIcon onClick={scrollDown} />
         </div>
       </div>
-      <section>
+      <section className={styles.sliderSection}>
         <div className={styles.slider} id="slider">
           <HorizontalSlider images={images} />
+        </div>
+      </section>
+      <section className={styles.productSection}>
+        <div className={styles.sideBar}>
+          <ul className={styles.listItems}>
+            <li className={styles.listItem}>Fruits & Vegetables</li>
+            <li className={styles.listItem}>Snacks</li>
+            <li className={styles.listItem}>Home & Cleaning</li>
+            <li className={styles.listItem}>Pet care</li>
+            <li className={styles.listItem}>Personal Hygiene</li>
+          </ul>
+        </div>
+        <div className={styles.products}>
+          <Product />
         </div>
       </section>
     </>

@@ -88,3 +88,30 @@
 .slider {
   margin: 20px;
 }
+.productSection {
+  display: flex;
+  background: #f7f7f7;
+  position: sticky;
+  .sideBar {
+    min-height: 92vh;
+    width: 15%;
+    background: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    top: 0;
+    left: 0;
+    .listItem {
+      list-style: none;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 30px 0;
+    }
+  }
+  .products {
+    padding: 30px;
+  }
+}

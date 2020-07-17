@@ -6,14 +6,14 @@ import styles from "./App.module.css";
 const App = () => {
   function setBackground() {
     if (
-      document.body.scrollTop > 10 ||
-      document.documentElement.scrollTop > 10
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
     ) {
       document.getElementById("navbar").style.background = "white";
       document.getElementById("navbar").style.boxShadow =
         "2px 2px 15px rgba(192,192,192,0.1)";
     } else {
-      document.getElementById("navbar").style.background = "transparent";
+      document.getElementById("navbar").style.background = "none";
       document.getElementById("navbar").style.boxShadow = "none";
     }
   }
