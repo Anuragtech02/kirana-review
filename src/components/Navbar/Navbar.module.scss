@@ -11,6 +11,12 @@
 .logo {
   width: fit-content;
   flex: 1;
+  h3 {
+    color: var(--primaryColor) !important;
+    span {
+      color: black !important;
+    }
+  }
 }
 .navLinks {
   display: flex;

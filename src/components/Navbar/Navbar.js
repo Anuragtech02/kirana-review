@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import classNames from "classnames";
 
 const Navbar = () => {
   return (
@@ -14,17 +15,26 @@ const Navbar = () => {
       </div>
       <ul className={styles.navLinks}>
         <li className={styles.navLink}>
-          <Link to="/" className={styles.noDecoration}>
+          <Link
+            to="/"
+            className={classNames(styles.noDecoration, styles.colorBlack)}
+          >
             Home
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/about" className={styles.noDecoration}>
+          <Link
+            to="/about"
+            className={classNames(styles.noDecoration, styles.colorBlack)}
+          >
             About
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/offer" className={styles.noDecoration}>
+          <Link
+            to="/offer"
+            className={classNames(styles.noDecoration, styles.colorBlack)}
+          >
             Offer
           </Link>
         </li>
