@@ -1,7 +1,7 @@
 {
   "name": "kirana-review",
   "version": "0.1.0",
-  "homepage": "http://anuragtecho2.github.io/kirana-review/",
+  "homepage": "http://anuragtech02.github.io/kirana-review/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
