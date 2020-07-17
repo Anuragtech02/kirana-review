@@ -1,2 +1,0 @@
-(this["webpackJsonpkirana-review"]=this["webpackJsonpkirana-review"]||[]).push([[0],{3:function(e,n,t){e.exports={container:"App_container__1MQN3"}},4:function(e,n,t){e.exports=t(9)},9:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),i=t(2),c=t.n(i),o=t(3),s=t.n(o),u=function(){return r.a.createElement("div",{className:s.a.container},r.a.createElement("h1",null,"Kirana Review Feedbox"))};c.a.render(r.a.createElement(u,null),document.getElementById("root"))}},[[4,1,2]]]);
-//# sourceMappingURL=main.cb185cdc.chunk.js.map

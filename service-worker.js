@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kirana-review/precache-manifest.e6b8953df530a25607d953b831c480a6.js"
+  "/kirana-review/precache-manifest.6505554e7876d772e9a10fa024e8251a.js"
 );
 
 self.addEventListener('message', (event) => {
