@@ -66,6 +66,7 @@
   padding: 10px 10px;
   background: rgba(163, 163, 163, 0.1);
   border-radius: 5px;
+  color: var(--primaryColor);
 }
 
 .search .input {
@@ -107,5 +108,24 @@
 
 .search .btn button:hover {
   cursor: pointer;
+}
+
+.scrollIcon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.scrollIcon svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.scrollIcon svg:hover {
+  cursor: pointer;
+}
+
+.slider {
+  margin: 20px;
 }
 /*# sourceMappingURL=Home.module.css.map */

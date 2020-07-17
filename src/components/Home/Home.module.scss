@@ -40,6 +40,7 @@
       padding: 10px 10px;
       background: rgba(163, 163, 163, 0.1);
       border-radius: 5px;
+      color: var(--primaryColor);
     }
   }
   .input {
@@ -74,4 +75,16 @@
       }
     }
   }
+}
+.scrollIcon {
+  width: fit-content;
+  svg {
+    transform: scale(0.8);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.slider {
+  margin: 20px;
 }

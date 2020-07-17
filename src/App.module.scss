@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 :root {
   --primaryColor: #009f7f;
@@ -21,4 +22,5 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all 0.2s ease;
 }

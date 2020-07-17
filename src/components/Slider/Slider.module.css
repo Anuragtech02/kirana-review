@@ -1,0 +1,17 @@
+.slider {
+  padding: 30px;
+}
+
+.slider .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .image img {
+  margin: 0 10px;
+}
+/*# sourceMappingURL=Slider.module.css.map */

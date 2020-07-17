@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -24,5 +25,7 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 /*# sourceMappingURL=App.module.css.map */
