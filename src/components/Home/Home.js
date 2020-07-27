@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Home.module.css";
+import { Grid } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import { HorizontalSlider, Product } from "../../components";
+import { HorizontalSlider, Product, SwiperSlider } from "../../components";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
@@ -44,10 +45,10 @@ export const Home = () => {
       </div>
       <section className={styles.sliderSection}>
         <div className={styles.slider} id="slider">
-          <HorizontalSlider images={images} />
+          <HorizontalSlider />
         </div>
       </section>
-      <section className={styles.productSection}>
+      {/* <section className={styles.productSection}>
         <div className={styles.sideBar}>
           <ul className={styles.listItems}>
             <li className={styles.listItem}>Fruits & Vegetables</li>
@@ -60,7 +61,7 @@ export const Home = () => {
         <div className={styles.products}>
           <Product />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
