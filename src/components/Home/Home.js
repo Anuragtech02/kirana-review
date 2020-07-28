@@ -3,11 +3,12 @@ import styles from "./Home.module.css";
 import { Grid } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import { HorizontalSlider, Product, SwiperSlider } from "../../components";
+import { HorizontalSlider, Product } from "../../components";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
+import green from "../../assets/images/green.jpg";
 
 export const Home = () => {
   const images = [image1, image2, image3, image4];
@@ -17,6 +18,46 @@ export const Home = () => {
     a.href = "#slider";
     a.click();
   };
+
+  const products = [
+    {
+      name: "Lime",
+      price: "10",
+      category: "Food",
+      imgSrc: green,
+    },
+    {
+      name: "Rin",
+      price: "485",
+      category: "Household",
+      imgSrc:
+        "https://images-na.ssl-images-amazon.com/images/I/61we91ORBPL._SL1000_.jpg",
+    },
+    {
+      name: "Lime",
+      price: "10",
+      category: "Food",
+      imgSrc: green,
+    },
+    {
+      name: "Lime",
+      price: "10",
+      category: "Food",
+      imgSrc: green,
+    },
+    {
+      name: "Lime",
+      price: "10",
+      category: "Food",
+      imgSrc: green,
+    },
+    {
+      name: "Lime",
+      price: "10",
+      category: "Food",
+      imgSrc: green,
+    },
+  ];
 
   return (
     <>
@@ -48,20 +89,19 @@ export const Home = () => {
           <HorizontalSlider />
         </div>
       </section>
-      {/* <section className={styles.productSection}>
-        <div className={styles.sideBar}>
-          <ul className={styles.listItems}>
-            <li className={styles.listItem}>Fruits & Vegetables</li>
-            <li className={styles.listItem}>Snacks</li>
-            <li className={styles.listItem}>Home & Cleaning</li>
-            <li className={styles.listItem}>Pet care</li>
-            <li className={styles.listItem}>Personal Hygiene</li>
-          </ul>
+      <section className={styles.products}>
+        <div className={styles.productContainer}>
+          <Grid container spacing={4}>
+            {products.map((product) => {
+              return (
+                <Grid item md={4} lg={3} xs={12} sm={6}>
+                  <Product product={product} />
+                </Grid>
+              );
+            })}
+          </Grid>
         </div>
-        <div className={styles.products}>
-          <Product />
-        </div>
-      </section> */}
+      </section>
     </>
   );
 };

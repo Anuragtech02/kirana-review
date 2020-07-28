@@ -169,4 +169,9 @@
 .productSection .products {
   padding: 30px;
 }
+
+.productContainer {
+  width: var(--fixedWidth);
+  margin: 10vh auto;
+}
 /*# sourceMappingURL=Home.module.css.map */

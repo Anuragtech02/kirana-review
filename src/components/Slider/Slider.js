@@ -64,7 +64,7 @@ export const HorizontalSlider = () => {
     lazyload: true,
     slidesToShow: 1,
     swipeToSlide: true,
-    dots: true,
+    dots: false,
     autoplay: true,
   };
 
@@ -96,13 +96,15 @@ export const HorizontalSlider = () => {
       <Slider {...settings} className={styles.slider}>
         {slides.map((slide, index) => {
           return (
-            <Card key={slide.title} className={styles.sliderCard}>
+            <Card key={slide.title} className={styles.card}>
               <div
-                className={styles.singleSlide}
+                className={styles.outerDiv}
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <h2>{slide.title}</h2>
-                <Button className={styles.showMoreBtn}>Show More</Button>
+                <div className={styles.innerDiv}>
+                  <h2>{slide.title}</h2>
+                  <Button className={styles.showMoreBtn}>Show More</Button>
+                </div>
               </div>
             </Card>
           );

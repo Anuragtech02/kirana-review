@@ -1,21 +1,24 @@
 import React from "react";
 import styles from "./Product.module.css";
+import { Card, Button } from "@material-ui/core";
 import green from "../../assets/images/green.jpg";
 
-export const Product = () => {
+export const Product = ({ product }) => {
+  const { name, category, price, imgSrc } = product;
+
   return (
     <div clasName={styles.container}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
-          <img src={green} alt="lime" />
+          <img src={imgSrc} alt={name} />
         </div>
         <div className={styles.title}>
-          <h5>Lime</h5>
-          <h6>Food</h6>
+          <h5>{name}</h5>
+          <h6>{category}</h6>
         </div>
         <div className={styles.price}>
-          <h4>₹10</h4>
-          <h5>Add + </h5>
+          <h4>₹{price}</h4>
+          <Button className={styles.addBtn}>Add + </Button>
         </div>
       </div>
     </div>

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ;CAKnB;;AAPD,AAGE,gBAHc,CAGd,iBAAiB,CAAC;EAChB,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;CACf;;AAGH,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,KAAK;EACtB,iBAAiB,EAAE,SAAS;CAC7B",
-    "sources": [
-        "SwiperSlider.module.scss"
-    ],
-    "names": [],
-    "file": "SwiperSlider.module.css"
-}

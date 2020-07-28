@@ -6,8 +6,8 @@
 }
 .card {
   background: white;
-  border-radius: 5px;
   padding: 20px 30px;
+  box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.2);
 }
 .title {
   width: 100%;
@@ -29,8 +29,12 @@
   }
 }
 .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
-    width: 200px;
+    width: 200px !important;
+    margin: auto;
   }
 }
 .price {
@@ -43,13 +47,10 @@
     font-weight: 400;
     font-size: 1.5rem;
   }
-  h5 {
-    background: var(--primaryColor);
-    padding: 5px 10px;
-    border-radius: 5px;
+
+  .addBtn {
+    background: var(--primaryColor) !important;
     color: white;
-    &:hover {
-      cursor: pointer;
-    }
+    padding: 5px 15px !important;
   }
 }
