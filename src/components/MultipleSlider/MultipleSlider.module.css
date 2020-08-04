@@ -1,0 +1,32 @@
+.sliderBase {
+  width: 200px !important;
+  height: 200px !important;
+  text-align: center;
+}
+
+.sliderBase img {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 100px !important;
+  -webkit-border-radius: 100px !important;
+  -moz-border-radius: 100px !important;
+  background-size: cover;
+  display: block;
+}
+
+.sliderBase h6 {
+  color: black;
+  font-size: 1.0rem;
+}
+
+.slider {
+  width: 100%;
+  margin: auto;
+}
+
+.slider h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 20px !important;
+}
+/*# sourceMappingURL=MultipleSlider.module.css.map */

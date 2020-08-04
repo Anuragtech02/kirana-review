@@ -1,0 +1,113 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.flowLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgContainer {
+  margin-left: 20% !important;
+  margin-top: 10% !important;
+}
+
+.imgContainer img {
+  width: 250px !important;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10%;
+  margin-right: 10px;
+  width: 30%;
+}
+
+.title button {
+  background-color: var(--primaryColor);
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: medium;
+  margin-top: 10px;
+}
+
+.title h5 {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+}
+
+.title h5,
+.title h6 {
+  margin: auto;
+}
+
+.title h6 {
+  color: var(--fontLight);
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.card {
+  background: white;
+  padding: 20px 30px;
+  -webkit-box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: "fit-content";
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.card li h5 {
+  font-weight: bold;
+  font-size: 1.1rem !important;
+}
+
+.card li p {
+  float: right;
+  margin-right: auto;
+  font-size: 1.0rem;
+}
+
+.card li h6 {
+  color: var(--fontLight);
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.listUnstyled {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.listUnstyled h4 {
+  font-weight: bold;
+  margin-left: 40px;
+  font-size: 1.2rem;
+}
+
+.multipleSlider {
+  margin: 60px;
+}
+/*# sourceMappingURL=Review.module.css.map */
