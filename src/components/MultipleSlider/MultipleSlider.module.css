@@ -1,15 +1,15 @@
 .sliderBase {
-  width: 200px !important;
-  height: 200px !important;
+  width: 160px !important;
+  height: 160px !important;
   text-align: center;
 }
 
 .sliderBase img {
-  width: 200px !important;
-  height: 200px !important;
-  border-radius: 100px !important;
-  -webkit-border-radius: 100px !important;
-  -moz-border-radius: 100px !important;
+  width: 160px !important;
+  height: 160px !important;
+  border-radius: 80px !important;
+  -webkit-border-radius: 80px !important;
+  -moz-border-radius: 80px !important;
   background-size: cover;
   display: block;
 }
@@ -19,8 +19,14 @@
   font-size: 1.0rem;
 }
 
+.sliderBase div {
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .slider {
-  width: 100%;
+  width: var(--fixedWidth);
   margin: auto;
 }
 

@@ -3,6 +3,19 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Appbar, Navbar, About, Home ,Review} from "./components";
 import styles from "./App.module.css";
 import {products} from "./Shared/Products";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+  
+  
 
 const App = () => {
   function setBackground() {
@@ -18,13 +31,14 @@ const App = () => {
       document.getElementById("navbar").style.boxShadow = "none";
     }
   }
-
+ 
   useEffect(() => {
     function watchScroll() {
       window.addEventListener("scroll", setBackground);
+
     }
     watchScroll();
-
+   
     return () => {
       window.removeEventListener("scroll", setBackground);
     };
@@ -36,6 +50,7 @@ const App = () => {
    }
   return (
     <Router>
+      <ScrollToTop/>
       <div className={styles.navbar} id="navbar">
         <Navbar />
       </div>

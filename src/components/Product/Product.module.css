@@ -17,8 +17,6 @@
 .card {
   background: white;
   padding: 20px 30px;
-  -webkit-box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.2);
 }
 
 .title {

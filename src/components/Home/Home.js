@@ -108,8 +108,8 @@ export const Home = () => {
             {products.map((product) => {
               return (
                <Grid key={product.id} item md={4} lg={3} xs={12} sm={6}>
-                  <Link to={`/Review/${product.id}`} style={{textDecoration:"none"}}> <Product product={product} />
-                  </Link> </Grid>
+                   <Product product={product} />
+                   </Grid>
               );
             })}
           </Grid>

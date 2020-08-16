@@ -3,29 +3,33 @@
     display: -ms-flexbox;
     display: flex;
    flex-direction: column;
-    min-height: 100vh;
-    
+   
+   
 }
 .flowLeft{
-    
+    margin: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width:var(--fixedWidth);
 }
 .imgContainer{
-    margin-left: 20% !important;
-    margin-top : 10% !important;
+ 
+  margin-top : 10% !important;
     img{
         width: 250px !important;
+        
     }
 }
 
 .title {
    
-    display: flex;
+  display: flex;
     height:max-content;
     flex-direction:column;
     margin-top: 10%;
-    margin-right: 10px;
-    width: 30%;
+    float: right;
+    width: 40%;
     button{
         background-color: var(--primaryColor);
         border: none;
@@ -36,57 +40,173 @@
         display:inline-block;
         font-size: medium;
         margin-top: 10px;
-       
+        text-transform: uppercase;
     }
     h5 {
       font-size: 1.3rem !important;
       font-weight:bold;
+      padding:5px;
+      
+    }
     
-    }
-    h5,
-    h6 {
-      margin: auto;
-    }
+   
     h6 {
       color: var(--fontLight);
-      font-size: 1rem !important;
+      font-size: 0.9rem !important;
       font-weight: 300;
+      padding: 3px;
     }
   }
-  .card {
-    background: white;
-    padding: 20px 30px;
-    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
-    width:100%;
-    height:"fit-content";
-    margin-top:5px;
-    margin-left: 10px;
-    li{
-      h5{
-        font-weight: bold;
-        font-size: 1.1rem !important;
-      }
-      p{
-        float:right;
-        margin-right: auto;
-        font-size: 1.0rem;
-      }
-      h6{
-        color: var(--fontLight);
-        font-size: 1rem !important;
-        font-weight: 300;
-      }
-    }
-  }
+  
   .listUnstyled{
     list-style: none;
-    margin-top: 40px;
+    width:var(--fixedWidth);
+    margin: auto; 
+    margin-top:6%;
+   
     h4{
       font-weight: bold;
-      margin-left: 40px;
+     margin:20px;
       font-size: 1.2rem;
     }
+    button{
+      margin:20px;
+      background-color: var(--primaryColor);
+      color:#fff;
+      padding: 10px 15px;
+      border:none;
+      text-transform: uppercase;
+    }
+    h6{
+      color: var(--fontLight);
+        font-size: 1rem !important;
+        font-weight: 300;
+
+    }
+    .card {
+      background: white;
+      padding: 20px 30px;
+      box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+      width:100%;
+      height:"fit-content";
+      margin-top:5px;
+      margin-left: 10px;
+      li{
+        h5{
+          font-weight: bold;
+          font-size: 1.0rem !important;
+         
+         
+  
+        }
+        .avatar{
+          float:left;
+          margin-left: auto;
+          background-color: var(--primaryColor);
+          margin-right: 10px;
+        }
+        p{
+          float:right;
+          margin-right: auto;
+          font-size: 1.0rem;
+        }
+        h6{
+          color: var(--fontLight);
+          font-size: 1rem !important;
+          font-weight: 300;
+        }
+      }
+    }
+    
   }
   .multipleSlider{
-     margin: 60px ;
+    margin-top:6%;
+    margin-bottom:6%;
+    
+ }
+
+  table {
+   
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #dddddd;
+    margin:auto;
+    td, th {
+     
+      text-align: left;
+      padding: 8px;
+      font-weight: normal;
+    }
+    th{
+      background-color: var(--primaryColor);
+      color: #fff;
+      
+    }
+    tr:nth-child(even) {
+      background-color:#d7f5ef;
+    }
   }
+  
+  
+  .modal{
+   margin-left:500px;
+   margin-right:auto;
+   margin-top:10%;
+   border-color:#fff;
+   box-shadow: #FFF;
+  }
+  .paper{
+    width:400px;
+    height:400px;
+    padding:20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #FFF;
+    box-shadow:none;
+    border: 2px solid #fff;
+   
+
+   h2{
+    color:var(--primaryColor);
+    span{
+      color:black;
+    }
+
+   } 
+    
+    .form{
+      margin:auto;
+      display: flex;
+      flex-direction: column;
+
+     
+      h6{
+          
+          margin-top:25px;
+          font-weight: 400;
+          float: left;
+          display:flex;
+          font-size:14px;
+          color:var(--fontLight);
+      }
+       button{
+        margin-top:30px;
+        margin-bottom: 10px;
+        background-color: var(--primaryColor);
+        color:#fff;
+        padding: 15px 20px;
+        border:none;
+        font-size: 15px;
+        text-transform: uppercase;
+       }
+       .fileInput{
+        margin-top: 20px;
+        
+       }
+    }
+
+  }
+  
+  
+  
+ 
