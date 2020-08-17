@@ -7,11 +7,13 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.logo}>
-        <Link to="/" className={styles.noDecoration}>
+        
           <h3>
-            Kirana <span> Review </span>
+            <Link to="/" className={styles.noDecoration}>
+              Kirana <span> Review </span>  
+            </Link>
           </h3>
-        </Link>
+          
       </div>
       <ul className={styles.navLinks}>
         <li className={styles.navLink}>

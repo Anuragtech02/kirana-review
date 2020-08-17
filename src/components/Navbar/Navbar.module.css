@@ -31,11 +31,11 @@
           flex: 1;
 }
 
-.logo h3 {
+.logo h3 a {
   color: var(--primaryColor) !important;
 }
 
-.logo h3 span {
+.logo h3 a span {
   color: black !important;
 }
 
