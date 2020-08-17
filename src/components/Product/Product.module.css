@@ -17,8 +17,6 @@
 .card {
   background: white;
   padding: 20px 30px;
-  -webkit-box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.2);
 }
 
 .title {
@@ -36,17 +34,20 @@
 .title h5 {
   font-size: 1.3rem;
   font-weight: 400;
+  color: black;
 }
 
 .title h5,
 .title h6 {
   margin: auto;
+  color: black;
 }
 
 .title h6 {
   color: var(--fontLight);
   font-size: 1rem;
   font-weight: 300;
+  color: black;
 }
 
 .imageContainer {
@@ -83,6 +84,7 @@
 .price h4 {
   font-weight: 400;
   font-size: 1.5rem;
+  color: black;
 }
 
 .price .addBtn {

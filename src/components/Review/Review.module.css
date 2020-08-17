@@ -1,0 +1,230 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flowLeft {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: var(--fixedWidth);
+}
+
+.imgContainer {
+  margin-top: 10% !important;
+}
+
+.imgContainer img {
+  width: 250px !important;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10%;
+  float: right;
+  width: 40%;
+}
+
+.title button {
+  background-color: var(--primaryColor);
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: medium;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.title h5 {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.title h6 {
+  color: var(--fontLight);
+  font-size: 0.9rem !important;
+  font-weight: 300;
+  padding: 3px;
+}
+
+.listUnstyled {
+  list-style: none;
+  width: var(--fixedWidth);
+  margin: auto;
+  margin-top: 6%;
+}
+
+.listUnstyled h4 {
+  font-weight: bold;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.listUnstyled button {
+  margin: 20px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.listUnstyled h6 {
+  color: var(--fontLight);
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.listUnstyled .card {
+  background: white;
+  padding: 20px 30px;
+  -webkit-box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: "fit-content";
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.listUnstyled .card li h5 {
+  font-weight: bold;
+  font-size: 1.0rem !important;
+}
+
+.listUnstyled .card li .avatar {
+  float: left;
+  margin-left: auto;
+  background-color: var(--primaryColor);
+  margin-right: 10px;
+}
+
+.listUnstyled .card li p {
+  float: right;
+  margin-right: auto;
+  font-size: 1.0rem;
+}
+
+.listUnstyled .card li h6 {
+  color: var(--fontLight);
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.multipleSlider {
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+  margin: auto;
+}
+
+table td, table th {
+  text-align: left;
+  padding: 8px;
+  font-weight: normal;
+}
+
+table th {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #d7f5ef;
+}
+
+.modal {
+  margin-left: 500px;
+  margin-right: auto;
+  margin-top: 10%;
+  border-color: #fff;
+  -webkit-box-shadow: #FFF;
+          box-shadow: #FFF;
+}
+
+.paper {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #FFF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #fff;
+}
+
+.paper h2 {
+  color: var(--primaryColor);
+}
+
+.paper h2 span {
+  color: black;
+}
+
+.paper .form {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.paper .form h6 {
+  margin-top: 25px;
+  font-weight: 400;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: var(--fontLight);
+}
+
+.paper .form button {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.paper .form .fileInput {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=Review.module.css.map */
