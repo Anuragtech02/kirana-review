@@ -10,6 +10,7 @@
 :root {
   --primaryColor: #009f7f;
   --accentColor: #fff;
+  --backgroundColor: #EAEDED;
   --fontLight: #8b8b8b;
   --fixedWidth: 70%;
 }
@@ -28,5 +29,28 @@ h1 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   z-index: 10000;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007744;
 }
 /*# sourceMappingURL=App.module.css.map */

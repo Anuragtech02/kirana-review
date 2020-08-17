@@ -1,0 +1,27 @@
+.categoryContainer {
+  width: 30%;
+  max-width: 30%;
+  background-color: #fff;
+  position: 'relative';
+  overflow: 'auto';
+  max-height: 350px;
+  overflow-y: scroll;
+  -webkit-box-shadow: 2px 2px 4px rgba(75, 75, 75, 0.2);
+          box-shadow: 2px 2px 4px rgba(75, 75, 75, 0.2);
+}
+
+.categoryContainer .list {
+  background-color: #fff;
+}
+
+.categoryContainer .list .subheader {
+  width: 100% !important;
+  padding-top: 2px  !important;
+  padding-bottom: 2px  !important;
+  background-color: #fff;
+}
+
+.categoryContainer .nested {
+  padding: 0 10%;
+}
+/*# sourceMappingURL=Category.module.css.map */
