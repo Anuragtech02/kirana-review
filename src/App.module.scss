@@ -8,6 +8,7 @@
 :root {
   --primaryColor: #009f7f;
   --accentColor: #fff;
+  --backgroundColor: #EAEDED;
   --fontLight: #8b8b8b;
   --fixedWidth: 70%;
 }
@@ -24,4 +25,29 @@ h1 {
   width: 100%;
   transition: all 0.2s ease;
   z-index: 10000;
+}
+
+
+// Custom scrollbar...
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track-piece{
+  background: rgba($color: #fff, $alpha: 0.1);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007744; 
 }

@@ -10,6 +10,7 @@ import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
 import green from "../../assets/images/green.jpg";
+import Category from "../Category/Category";
 
 export const Home = () => {
   const images = [image1, image2, image3, image4];
@@ -105,6 +106,10 @@ export const Home = () => {
       <section className={styles.products}>
         <div className={styles.productContainer}>
           <Grid container spacing={4}>
+          
+  {/* Remove <Category /> From Here... */}
+          <Category />
+  {/* Remove <Category /> From Here... */}
             {products.map((product) => {
               return (
                <Grid key={product.id} item md={4} lg={3} xs={12} sm={6}>
