@@ -1,0 +1,187 @@
+$borderRadius: 5px;
+$shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+.signupContainer{
+
+    width: var(--fixedWidth);
+    margin: 10vh auto;
+    max-width: 70vw;
+    align-self: center;
+    justify-self: center;
+    background-color: #fff;
+    border-radius: $borderRadius;
+
+    .image{
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 30%;
+        transform: translate(10%,15%);
+        margin-right: 8%;
+    }
+    
+    .formContainer{
+        width: 35%;
+        margin: 2% 3%;
+        border-radius: $borderRadius;
+        padding: 2% 3%;
+        align-content: center;
+        box-shadow: 1px 3px 6px rgba($color: #000000, $alpha: 0.1);
+
+        h3{
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #515151;
+        }
+
+        .socialBtn{
+            padding: 7px 54px;
+            box-shadow: $shadow;
+            border-radius: $borderRadius;
+            border: 1px solid #e2e2e2;
+        }
+
+        .inputBase{
+            width: 100%;
+            outline: none;
+            border-radius: $borderRadius;
+            border: none;
+        }
+
+        .socialContainer{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin: 15px 0;
+
+            .googleBtn{
+                @extend .socialBtn;
+                background-color: #fff;
+                align-self: flex-start;
+            }
+
+            .fbBtn{
+                @extend .socialBtn;
+                background-color: #4267B2;
+                align-self: flex-end;
+                margin-left: 4%;
+                right: 0;
+                float: right;
+            }
+        }
+
+        .divider{
+            
+            margin: 4% 0;
+
+            hr{
+                line-height: 1em;
+                position: relative;
+                outline: 0;
+                border: 0;
+                color: black;
+                text-align: center;
+                height: 1.5em;
+                opacity: .5;
+                &:before {
+                    content: '';
+                    background: linear-gradient(to right, transparent, #818078, transparent);
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    height: 1px;
+                }
+                &:after {
+                    content: "OR";
+                    position: relative;
+                    display: inline-block;
+                    color: black;
+                    padding: 0 .5em;
+                    line-height: 1.5em;
+                    color: #818078;
+                    background-color: #fcfcfa;
+                }
+            }
+        }
+
+        form{
+
+            .input{
+                @extend .inputBase;
+                margin-top: 10px;
+                background-color: #E6E6E6;
+                padding: 12px 16px;
+
+                &::placeholder{
+                    color: #9F9F9F;
+                }
+
+                &:focus{
+                    box-shadow: $shadow;
+                }
+            }
+            
+            .checkbox{
+                border-radius: $borderRadius;
+                margin-top: 10%;
+            }
+
+            .rememberTxt{
+                color: var(--primaryColor);
+                font-size: 0.7em;
+            }
+
+            .submitBtn{
+                @extend .inputBase;
+                background-color: var(--primaryColor);  
+                color: #fff;
+                padding: 14px 16px;
+                text-transform: uppercase;
+
+                &:hover{
+                    background-color: #02763F;
+                }
+            }
+        }
+
+        .signInLink{
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: 4%;
+            font-size: 0.7em;
+            color: #9F9F9F;
+            button{
+                font-size: 1em;
+            }
+        }
+
+        .tc{
+            width: 100%;
+            display: block;
+            margin-top: 1%;
+            text-align: center;
+            font-size: 0.6em;
+            color: #9F9F9F;
+            button{
+                font-size: 1em;
+            }
+        }
+
+        span{
+            button{
+                padding: 0;
+                margin: 0;
+                background: none;
+                border: none;
+                color: var(--primaryColor);
+            }
+        }
+
+        button{
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+}

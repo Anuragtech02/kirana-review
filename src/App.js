@@ -4,6 +4,8 @@ import { Appbar, Navbar, About, Home ,Review} from "./components";
 import styles from "./App.module.css";
 import {products} from "./Shared/Products";
 import { useLocation } from "react-router-dom";
+import Login from "./components/Login/Login";
+import Signup, { SignupBase } from "./components/Signup/Signup";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -57,6 +59,9 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/signupbase" component={SignupBase} />
         <Route path="/Review/:id" exact component={ReviewWithId}/>
       </Switch>
     </Router>
