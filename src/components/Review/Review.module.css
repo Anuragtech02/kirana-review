@@ -24,10 +24,12 @@
 
 .imgContainer {
   margin-top: 10% !important;
+  margin-right: 30px;
 }
 
 .imgContainer img {
-  width: 250px !important;
+  min-width: 250px !important;
+  height: 250px;
 }
 
 .title {
@@ -63,6 +65,7 @@
   font-size: 1.3rem !important;
   font-weight: bold;
   padding: 5px;
+  text-transform: uppercase;
 }
 
 .title h6 {
@@ -81,7 +84,7 @@
 
 .listUnstyled h4 {
   font-weight: bold;
-  margin: 20px;
+  margin: 20px 0px;
   font-size: 1.2rem;
 }
 
@@ -108,7 +111,6 @@
   width: 100%;
   height: "fit-content";
   margin-top: 5px;
-  margin-left: 10px;
 }
 
 .listUnstyled .card li h5 {

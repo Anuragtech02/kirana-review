@@ -1,0 +1,35 @@
+.Paper {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  .image {
+    height: 150px;
+  }
+}
+
+.description {
+  flex: 1;
+  display: flex;
+  .button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    padding-top: 10px;
+    flex: 2;
+    h6{
+      display:flex;
+      align-items: center;
+      line-height: 1.5;
+    }
+  }
+}
+
+.addBtn {
+  background: #40dfbf !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 5px 15px !important;
+}

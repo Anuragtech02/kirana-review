@@ -6,20 +6,49 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
 }
 
-.card {
-  background: white;
+.container h1 {
+  font-size: 1.7rem;
+}
+
+.container .subcontainer {
+  width: var(--fixedWidth);
+  margin: 50px 0;
+}
+
+.container .card {
+  text-align: center;
+  text-transform: uppercase;
   padding: 20px 30px;
 }
 
-.title {
+.container .card .imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+}
+
+.container .card .imageContainer img {
+  min-width: 180px;
+  height: 180px;
+}
+
+.container .card .title {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,46 +58,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
-.title h5 {
-  font-size: 1.3rem;
+.container .card .title h5 {
+  font-size: 1.2rem;
   font-weight: 400;
   color: black;
 }
 
-.title h5,
-.title h6 {
-  margin: auto;
-  color: black;
-}
-
-.title h6 {
-  color: var(--fontLight);
-  font-size: 1rem;
-  font-weight: 300;
-  color: black;
-}
-
-.imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.imageContainer img {
-  width: 200px !important;
-  height: 200px;
-  margin: auto;
-}
-
-.price {
+.container .card .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,19 +77,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  margin-top: 10px;
+  padding-top: 20px;
 }
 
-.price h4 {
+.container .card .price h4 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: black;
 }
 
-.price .addBtn {
+.container .card .price .addBtn {
   background: var(--primaryColor) !important;
   color: white;
   padding: 5px 15px !important;
 }
-/*# sourceMappingURL=Product.module.css.map */
+/*# sourceMappingURL=CategorizedProduct.module.css.map */

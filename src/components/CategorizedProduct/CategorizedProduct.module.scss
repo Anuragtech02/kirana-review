@@ -1,0 +1,73 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:10%;
+   
+    h1{
+        font-size:1.7rem;
+        
+
+    }
+    .subcontainer{
+        width : var(--fixedWidth);
+        margin: 50px 0; 
+    }
+   
+     
+        .card{
+           
+            text-align: center;
+            text-transform: uppercase;
+            padding: 20px 30px;
+            .imageContainer{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         padding: 20px 30px;
+               img{
+                   min-width:180px;
+                   height: 180px;
+              }
+            }
+            .title{
+                width: 100%;
+              display: flex;
+                flex-direction: column;
+               margin: 0 auto;
+               padding-top: 20px;
+               
+               h5 {
+                font-size: 1.2rem;
+                font-weight: 400;
+                color:black;
+              }
+             
+            
+            }
+            .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 20px;
+               
+               
+                h4 {
+                  font-weight: 400;
+                  font-size: 1.4rem;
+                  color:black;
+                }
+              
+                .addBtn {
+                  background: var(--primaryColor) !important;
+                  color: white;
+                  padding: 5px 15px !important;
+                }
+              }
+             
+           
+         }
+            
+        
+    }
