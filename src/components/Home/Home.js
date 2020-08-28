@@ -11,6 +11,7 @@ import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
 import green from "../../assets/images/green.jpg";
 import Category from "../Category/Category";
+import {products} from "../../Shared/Products";
 
 export const Home = () => {
   const images = [image1, image2, image3, image4];
@@ -21,57 +22,10 @@ export const Home = () => {
     a.click();
   };
 
-  const products = [
-    { 
-      id: 1,
-      name: "Lime",
-      price: "10",
-      category: "Food",
-      imgSrc: green,
-      description: "A lime is a citrus fruit, which is typically round, green in color, 3–6 centimetres in diameter, and contains acidic juice vesicles."
-    },
-    {
-      id: 2,
-      name: "Rin",
-      price: "485",
-      category: "Household",
-      imgSrc:
-        "https://images-na.ssl-images-amazon.com/images/I/61we91ORBPL._SL1000_.jpg",
-        description: "Sparkling bright clothes not only help form great impressions, but also provides confidence to realize ones ambitions. Rin understands this need and strives to deliver best in class whiteness and brightness through continuous innovation and product improvements."
-    },
-    {
-      id: 3,
-      name: "Lime",
-      price: "10",
-      category: "Food",
-      imgSrc: green,
-      description: "A lime is a citrus fruit, which is typically round, green in color, 3–6 centimetres in diameter, and contains acidic juice vesicles."
-    },
-    {
-      id: 4,
-      name: "Lime",
-      price: "10",
-      category: "Food",
-      imgSrc: green,
-      description: "A lime is a citrus fruit, which is typically round, green in color, 3–6 centimetres in diameter, and contains acidic juice vesicles."
-    },
-    {
-      id: 5,
-      name: "Lime",
-      price: "10",
-      category: "Food",
-      imgSrc: green,
-      description: "A lime is a citrus fruit, which is typically round, green in color, 3–6 centimetres in diameter, and contains acidic juice vesicles."
-    },
-    {
-      id: 6,
-      name: "Lime",
-      price: "10",
-      category: "Food",
-      imgSrc: green,
-      description: "A lime is a citrus fruit, which is typically round, green in color, 3–6 centimetres in diameter, and contains acidic juice vesicles.",
-    },
-  ];
+ 
+  
+   
+   
 
   return (
     <>

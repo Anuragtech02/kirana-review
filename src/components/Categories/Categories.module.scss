@@ -1,0 +1,72 @@
+.container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top:10%;
+    
+     h1{
+         font-size:30px;
+    
+     }
+     
+     .categoryBox{
+        width : var(--fixedWidth);
+         margin: 50px 0; 
+      
+         .card{
+             padding: 25px, 30px;
+             text-align: center;
+             text-transform: uppercase;
+             .imgContainer{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+         
+                img{
+                    min-width:200px;
+                    height: 200px;
+               }
+             }
+             .title{
+                
+                 padding-top: 20px ;
+                h5{
+                    color:black;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                }
+                button{
+                    border:none;
+                    background-color: #fff;
+                }
+                
+             }
+             .list{
+                
+               
+                text-transform: uppercase;
+                padding:10px;
+
+               h4{
+                   margin: 5px 0px;
+                   text-align: left; 
+                   font-weight: 600;
+                   font-size: 1.1rem;
+               }
+                li{
+                    padding:2px;
+                    font-size:1.0rem;
+                    text-align: left;
+                    
+                }
+                li:nth-child(even){
+                    background-color: rgb(236, 233, 233);
+                }
+              
+            
+          }
+             
+         }
+     }
+}

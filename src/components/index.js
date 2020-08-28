@@ -7,3 +7,5 @@ export { default as HorizontalSlider } from "./Slider/Slider";
 export { default as Review} from "./Review/Review";
 export { default as MultipleSlider} from "./MultipleSlider/MultipleSlider";
 export { default as Category } from "./Category/Category";
+export { default as Categories } from "./Categories/Categories";
+export { default as CategorizedProduct} from "./CategorizedProduct/CategorizedProduct";

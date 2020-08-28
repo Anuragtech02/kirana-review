@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Appbar, Navbar, About, Home ,Review} from "./components";
+import { Appbar, Navbar, About, Home ,Review,Categories, CategorizedProduct} from "./components";
 import styles from "./App.module.css";
 import {products} from "./Shared/Products";
 import { useLocation } from "react-router-dom";
@@ -50,6 +50,9 @@ const App = () => {
      return <Review product ={products.filter((product)=>product.id === parseInt(match.params.id,10))[0]} 
      products={products} /> ;
    }
+   const productWithName = ({match})=>{
+     return <CategorizedProduct products = {products.filter((product)=> product.category === match.params.name)}/>
+   }
   return (
     <Router>
       <ScrollToTop/>
@@ -63,6 +66,8 @@ const App = () => {
         <Route path="/signup" component={Signup} />
         <Route path="/signupbase" component={SignupBase} />
         <Route path="/Review/:id" exact component={ReviewWithId}/>
+        <Route path="/categories/:name" exact component={productWithName}/>
+        <Route path="/categories" component={Categories}/>
       </Switch>
     </Router>
   );
