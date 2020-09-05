@@ -9,6 +9,7 @@ import {
   Categories,
   CategorizedProduct,
   Search,
+  AddProduct,
 } from "./components";
 import styles from "./App.module.css";
 import { products } from "./Shared/Products";
@@ -91,6 +92,7 @@ const App = () => {
           <Route path="/categories/:name" exact component={productWithName} />
           <Route path="/search/:keyword" exact component={Search} />
           <Route path="/categories" component={Categories} />
+          <Route path="/addProduct" component={AddProduct} />
         </Switch>
       </Router>
     </SearchContextProvider>
