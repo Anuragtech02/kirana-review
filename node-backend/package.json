@@ -20,8 +20,11 @@
     "moment": "^2.27.0",
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "uuid": "^8.3.0",
+    "uuidv4": "^6.2.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

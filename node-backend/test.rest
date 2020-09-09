@@ -1,0 +1,16 @@
+GET http://localhost:5000/products
+
+
+###
+GET http://localhost:5000/products/200
+
+###
+POST http://localhost:5000/products/create
+Content-Type: application/json
+
+{
+    "name":"Lifebuoy",
+    "price":"225.00",
+    "category":"Hygiene",
+    "image":"https://images-na.ssl-images-amazon.com/images/I/51qFv%2BsjCeL._SL1000_.jpg"
+}
