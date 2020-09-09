@@ -1,0 +1,112 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  width: var(--fixedWidth);
+}
+
+.container .addProduct {
+  font-weight: 600 !important;
+}
+
+.innerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.innerContainer .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 40vh !important;
+  margin-right: 15px;
+}
+
+.innerContainer .image .img {
+  height: inherit;
+  max-height: 30vh !important;
+  width: inherit;
+}
+
+.innerContainer .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ProductName {
+  width: 100% !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.Description {
+  width: 100% !important;
+  margin: 10px 0 10px 0 !important;
+}
+
+.PriceandCategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.PriceandCategory .Price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px 0 0 !important;
+}
+
+.PriceandCategory .Category {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.addBtn {
+  background: #40dfbf !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 5px 15px !important;
+  margin: auto;
+}
+/*# sourceMappingURL=addProduct.module.css.map */
