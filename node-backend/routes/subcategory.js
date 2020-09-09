@@ -28,7 +28,20 @@ router.get("/:categoryName", async(req,res)=>{
         }
     })
 })
-
+// GET ALL SUBCATEGORIES
+router.get("/", async(req,res)=>{
+  await conn.query("SELECT * FROM subcategories ",
+  (err,result)=>{
+      if(err)
+      {
+          res.status(501).send(err.message);
+      }
+      else
+      {
+          res.status(200).json(result);
+      }
+  })
+})
 
 
 // CREATE SUBCATEGORY

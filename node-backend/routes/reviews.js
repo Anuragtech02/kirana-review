@@ -8,7 +8,7 @@ const conn = db.conn;
 //create review auto ID generation
 const createReviewQuery = (productId,userId,rating,review,image)=>{
     const data = {
-      reviewId: uuidv4(),
+      id: uuidv4(),
       productId,
       userId,
       rating,
@@ -97,7 +97,7 @@ router.post("/create",async(req,res)=>{
               {
                 var insertReview = {
                   "userId": results[i].userId,
-                  "reviewId": results[i].reviewId,
+                  "reviewId": results[i].id,
                   "rating": results[i].rating,
                   "review":results[i].review,
                    "image": results[i].image, 
@@ -129,7 +129,7 @@ router.post("/create",async(req,res)=>{
   //delete REVIEW 
   router.delete("/", async (req, res) => {
     await conn.query(
-        "DELETE FROM reviews WHERE reviewId = ?", req.body.reviewId,
+        "DELETE FROM reviews WHERE id = ?", req.body.id,
         (err, result) => {
           if (err) {
             res.status(501).send(err.message);
@@ -153,12 +153,13 @@ router.post("/create",async(req,res)=>{
               if(errorr){
                 res.status(501).json({"message": errorr.message});
               }
+             
                var Array = [];
                for(i=0;i<(re[0].totalReview>2?2:re[0].totalReview); i++)
                {
                  var insertReview = {
                    "userId": results[i].userId,
-                   "reviewId": results[i].reviewId,
+                   "reviewId": results[i].id,
                    "rating": results[i].rating,
                    "review":results[i].review,
                     "image": results[i].image, 
@@ -167,10 +168,11 @@ router.post("/create",async(req,res)=>{
               
                Array.push(JSON.stringify(insertReview))
                }
-                  conn.query("UPDATE products SET reviews = ? WHERE id = ?", [Array, req.body.productId],
+                  conn.query("UPDATE products SET reviews = ? WHERE id = ?", [results.length>0?Array:"{}", req.body.productId],
                   (errr , resultt)=>{
                     if(errr)
-                    {
+                    { 
+                      console.log(results);
                       res.status(501).json({"message": errr.message});
                     }
                     
@@ -187,8 +189,8 @@ router.post("/create",async(req,res)=>{
   // UPDATE REVIEW AND UPDATE AVG RATING
   router.patch("/",async(req,res)=>{
 
-      await conn.query("UPDATE reviews SET review=? , rating=? , productId=?, userId = ?, image = ? , date = ?  WHERE reviewId=?",
-      [req.body.review, req.body.rating, req.body.productId, req.body.userId, req.body.image, new Date().toDateString() ,req.body.reviewId],
+      await conn.query("UPDATE reviews SET review=? , rating=? , productId=?, userId = ?, image = ? , date = ?  WHERE id=?",
+      [req.body.review, req.body.rating, req.body.productId, req.body.userId, req.body.image, new Date().toDateString() ,req.body.id],
       (err,result)=>{
           if(err)
           {
@@ -218,7 +220,7 @@ router.post("/create",async(req,res)=>{
                {
                  var insertReview = {
                    "userId": results[i].userId,
-                   "reviewId": results[i].reviewId,
+                   "reviewId": results[i].id,
                    "rating": results[i].rating,
                    "review":results[i].review,
                     "image": results[i].image, 

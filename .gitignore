@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/node-backend/node-modules
+/node-backend/node-modules
+/node-backend/node_modules
+/node-backend/node_modules

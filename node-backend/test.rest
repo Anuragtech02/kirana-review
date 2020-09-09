@@ -1,15 +1,28 @@
-GET http://localhost:5000/api/categories
+GET http://localhost:5000/api/products
 
 
 ###
-GET http://localhost:5000/products/200
-
-###
-POST http://localhost:5000/api/categories/create
+DELETE         http://localhost:5000/api/reviews
 Content-Type: application/json
 
 {
-    "categoryName":"Lifebuoy",
-    "totalProducts":0,
-    "categoryImage":"https://images-na.ssl-images-amazon.com/images/I/51qFv%2BsjCeL._SL1000_.jpg"
+     "id": "bf7109a1-85e4-4280-9571-8af878f1611b",
+    "rating": 4,
+    "review": "tempting",
+    "userId": "123",
+    "productId":"6585ba92-eec8-4308-9e21-cef1ab5f2ae4",
+    "image": ""
+    
+    
+}
+###
+POST   http://localhost:5000/api/reviews/create
+Content-Type: application/json
+
+{
+    "productId":"6585ba92-eec8-4308-9e21-cef1ab5f2ae4",
+    "userId" : "123",
+    "rating" : 3,
+    "review" : "not bad",
+    "image" : ""
 }

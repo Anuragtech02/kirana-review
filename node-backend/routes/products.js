@@ -209,7 +209,7 @@ router.delete("/", async (req, res) => {
             res.status(501).send(er.message);
            }
          
-       conn.query("UPDATE categories SET stock = ? WHERE categoryName=?",
+       conn.query("UPDATE categories SET stock = ? WHERE name=?",
        [re[0].stock==null?0:re[0].stock,req.body.cat_name],(e,r)=>{
          if(e)
          {
