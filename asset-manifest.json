@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.7697007e.chunk.css",
-    "main.js": "./static/js/main.39655609.chunk.js",
-    "main.js.map": "./static/js/main.39655609.chunk.js.map",
+    "main.css": "./static/css/main.5833c60a.chunk.css",
+    "main.js": "./static/js/main.0e4b6eaa.chunk.js",
+    "main.js.map": "./static/js/main.0e4b6eaa.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7d283f66.js",
     "runtime-main.js.map": "./static/js/runtime-main.7d283f66.js.map",
-    "static/css/2.ab84ab19.chunk.css": "./static/css/2.ab84ab19.chunk.css",
-    "static/js/2.2e747d65.chunk.js": "./static/js/2.2e747d65.chunk.js",
-    "static/js/2.2e747d65.chunk.js.map": "./static/js/2.2e747d65.chunk.js.map",
+    "static/css/2.be5cb8f9.chunk.css": "./static/css/2.be5cb8f9.chunk.css",
+    "static/js/2.71c006bf.chunk.js": "./static/js/2.71c006bf.chunk.js",
+    "static/js/2.71c006bf.chunk.js.map": "./static/js/2.71c006bf.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.e43604b2d283dfa5e9222ced00c915ef.js": "./precache-manifest.e43604b2d283dfa5e9222ced00c915ef.js",
+    "precache-manifest.019e62e07592d93d0b3ff9c114de4505.js": "./precache-manifest.019e62e07592d93d0b3ff9c114de4505.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.ab84ab19.chunk.css.map": "./static/css/2.ab84ab19.chunk.css.map",
-    "static/css/main.7697007e.chunk.css.map": "./static/css/main.7697007e.chunk.css.map",
-    "static/js/2.2e747d65.chunk.js.LICENSE.txt": "./static/js/2.2e747d65.chunk.js.LICENSE.txt",
+    "static/css/2.be5cb8f9.chunk.css.map": "./static/css/2.be5cb8f9.chunk.css.map",
+    "static/css/main.5833c60a.chunk.css.map": "./static/css/main.5833c60a.chunk.css.map",
+    "static/js/2.71c006bf.chunk.js.LICENSE.txt": "./static/js/2.71c006bf.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "./static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/Home.module.css": "./static/media/grocer-bg.f1565ac2.png",
     "static/media/image1.png": "./static/media/image1.2f8285b1.png",
     "static/media/image1.jpg": "./static/media/image1.9b091def.jpg",
@@ -23,13 +24,15 @@
     "static/media/image3.jpg": "./static/media/image3.ae47a21c.jpg",
     "static/media/image4.png": "./static/media/image4.2f8285b1.png",
     "static/media/image4.jpg": "./static/media/image4.d58be3f3.jpg",
+    "static/media/signin-img.png": "./static/media/signin-img.ce4579c7.png",
+    "static/media/signup-img.png": "./static/media/signup-img.c26a6470.png",
     "static/media/slick-theme.css": "./static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7d283f66.js",
-    "static/css/2.ab84ab19.chunk.css",
-    "static/js/2.2e747d65.chunk.js",
-    "static/css/main.7697007e.chunk.css",
-    "static/js/main.39655609.chunk.js"
+    "static/css/2.be5cb8f9.chunk.css",
+    "static/js/2.71c006bf.chunk.js",
+    "static/css/main.5833c60a.chunk.css",
+    "static/js/main.0e4b6eaa.chunk.js"
   ]
 }
