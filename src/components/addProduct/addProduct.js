@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./addProduct.module.css";
+import styles from "./AddProduct.module.css";
 import { TextField, Button } from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
 import SearchContext from "../../Context/searchContext";

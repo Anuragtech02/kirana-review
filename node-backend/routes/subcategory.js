@@ -1,24 +1,22 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../config/db");
-const { v4: uuidv4 } = require("uuid");
 
 const conn = db.conn;
 
 //create subcategory auto ID generation
-const createSubcategoryQuery = (subcategoryName,categoryId)=>{
+const createSubcategoryQuery = (name,categoryName)=>{
     const data = {
-      subcategoryId: uuidv4(),
-      subcategoryName,
-      categoryId
+      name,
+      categoryName
     };
     return data;
 }
 
 // GET SUBCATEGORIES OF A SPECIFIC CATEGORY
 
-router.get("/:categoryId", async(req,res)=>{
-    await conn.query("SELECT * FROM subcategories WHERE categoryId=?", req.params.categoryId,
+router.get("/:categoryName", async(req,res)=>{
+    await conn.query("SELECT * FROM subcategories WHERE categoryName=?", req.params.categoryName,
     (err,result)=>{
         if(err)
         {
@@ -30,7 +28,20 @@ router.get("/:categoryId", async(req,res)=>{
         }
     })
 })
-
+// GET ALL SUBCATEGORIES
+router.get("/", async(req,res)=>{
+  await conn.query("SELECT * FROM subcategories ",
+  (err,result)=>{
+      if(err)
+      {
+          res.status(501).send(err.message);
+      }
+      else
+      {
+          res.status(200).json(result);
+      }
+  })
+})
 
 
 // CREATE SUBCATEGORY
@@ -38,8 +49,8 @@ router.get("/:categoryId", async(req,res)=>{
 router.post("/create",async(req,res)=>{
     const newCategory = await conn.query("INSERT INTO subcategories SET ?",
     createSubcategoryQuery(
-       req.body.subcategoryName,
-       req.body.categoryId
+       req.body.name,
+       req.body.categoryName,
     ),
     (err,result)=>{
 
@@ -50,7 +61,7 @@ router.post("/create",async(req,res)=>{
       }
       else
       {
-          res.status(201).send(`${req.body.subcategoryName} added successfully!`) 
+          res.status(201).send(`${req.body.name} added successfully!`) 
       }
     })
   })
@@ -58,7 +69,7 @@ router.post("/create",async(req,res)=>{
   //delete subcategory
   router.delete("/", async (req, res) => {
     await conn.query(
-        "DELETE FROM subcategories WHERE subcategoryId = ?", req.body.subcategoryId,
+        "DELETE FROM subcategories WHERE name = ?", req.body.name,
         (err, result) => {
           if (err) {
             res.status(501).send(err.message);
@@ -69,8 +80,8 @@ router.post("/create",async(req,res)=>{
 
   // UPDATE SUBCATEGORY
   router.patch("/",async(req,res)=>{
-      await conn.query("UPDATE subcategories SET subcategoryName=? , categoryId=? WHERE subcategoryId=?",
-      [req.body.subcategoryName, req.body.categoryId, req.body.subcategoryId],
+      await conn.query("UPDATE subcategories SET name=? , categoryName=? WHERE name=?",
+      [req.body.updatedName, req.body.categoryName, req.body.name],
       (err,result)=>{
           if(err)
           {

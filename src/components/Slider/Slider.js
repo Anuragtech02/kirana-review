@@ -62,10 +62,11 @@ export const HorizontalSlider = () => {
     centerPadding: "60px",
     accessibility: true,
     lazyload: true,
-    slidesToShow: "1",
+    slidesToShow: 1,
     swipeToSlide: true,
     dots: false,
     autoplay: true,
+    slidesToScroll:1,
   };
 
   const slides = [

@@ -10,3 +10,4 @@ export { default as Category } from "./Category/Category";
 export { default as Categories } from "./Categories/Categories";
 export { default as Search } from "./Search/Search";
 export { default as CategorizedProduct} from "./CategorizedProduct/CategorizedProduct";
+export { default as AddProduct } from "./AddProduct/AddProduct";
