@@ -1,14 +1,22 @@
 import React from "react";
 import styles from './CategorizedProduct.module.css';
-import {Card, Grid, Button} from '@material-ui/core';
+import {Card, Grid, Button, CircularProgress} from '@material-ui/core';
 import {Link} from "react-router-dom";
-import { products } from "../../Shared/Products";
+//import { products } from "../../Shared/Products";
 
 export const CategorizedProduct = (props)=>{
 
+  const[loading , setLoading] = React.useState(true);
+
+  React.useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false); 
+     
+    } , 1000); 
+  }, []);
     if(props.products.length)
    {
-    return(
+    return !loading?(
         <div className={styles.container}>
            
           <h1>{props.products[0].category}</h1>
@@ -32,21 +40,18 @@ export const CategorizedProduct = (props)=>{
           <Button className={styles.addBtn}>Add + </Button>
         </div>
                        
-
-                            
-                        
-                   </Card>
-                   </Grid>
-                  )
-             })} </Grid>
+            </Card>
+          </Grid>
+            )
+         })} </Grid>
              </div>
           </div>
         </div>
-    )}
+    ): <div className={styles.loader}><CircularProgress  /></div>;}
     else{
-        return <div className={styles.container}>
+        return !loading? <div className={styles.container}>
             <h1>No products to show </h1>
-        </div>;
+        </div>: <div className={styles.loader}><CircularProgress  /></div>;
     }
 }
 export default CategorizedProduct;

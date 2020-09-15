@@ -18,19 +18,21 @@
              padding: 25px, 30px;
              text-align: center;
              text-transform: uppercase;
-             .imgContainer{
+             
+
+         .imgContainer{
           display:flex;
           justify-content: center;
           align-items: center;
-         
+          height: 250px;
                 img{
-                    min-width:200px;
-                    height: 200px;
+                    max-width:200px;
+                   
                }
              }
              .title{
                 
-                 padding-top: 20px ;
+                padding-top: 20px ;
                 h5{
                     color:black;
                     font-size: 1.3rem;
@@ -44,7 +46,7 @@
              }
              .list{
                 
-               
+             
                 text-transform: uppercase;
                 padding:10px;
 
@@ -55,13 +57,14 @@
                    font-size: 1.1rem;
                }
                 li{
+                    list-style-type: none;
                     padding:2px;
                     font-size:1.0rem;
                     text-align: left;
                     
                 }
                 li:nth-child(even){
-                    background-color: rgb(236, 233, 233);
+                    background-color: #d7f5ef;
                 }
               
             
@@ -70,3 +73,15 @@
          }
      }
 }
+
+.loader{
+
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+ }
+ 

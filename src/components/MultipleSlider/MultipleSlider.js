@@ -11,7 +11,7 @@ export const MultipleSlider = (props)=>{
     props.images.map(image => (  
       <div className={styles.sliderBase}>  
         <Link to={`/Review/${image.id}`} style={{textDecoration:"none"}}>
-          <img  src= {image.imgSrc} alt={image.name} /> </Link>   
+         <div className={styles.imgContainer}> <img  src= {image.imgSrc} alt={image.name} /></div> </Link>   
           <h6>{image.name}</h6>
          <div> <Rating
           name="read-only"

@@ -47,7 +47,9 @@ router.get("/", async(req,res)=>{
 // CREATE SUBCATEGORY
 
 router.post("/create",async(req,res)=>{
-    const newCategory = await conn.query("INSERT INTO subcategories SET ?",
+
+    
+    const newCategory =  await conn.query("INSERT INTO subcategories SET ?",
     createSubcategoryQuery(
        req.body.name,
        req.body.categoryName,
@@ -63,20 +65,45 @@ router.post("/create",async(req,res)=>{
       {
           res.status(201).send(`${req.body.name} added successfully!`) 
       }
-    })
-  })
+    });
+  });
+
 
   //delete subcategory
   router.delete("/", async (req, res) => {
-    await conn.query(
+     await conn.query(
+       "SELECT categoryName FROM subcategories WHERE name = ?" , req.body.name
+     , (err, category)=>{
+       if(err)
+       {
+         res.status(400).json({"message" : err});
+       }
+     
+     conn.query(
         "DELETE FROM subcategories WHERE name = ?", req.body.name,
         (err, result) => {
           if (err) {
             res.status(501).send(err.message);
           }
+          const stock = conn.query("SELECT COUNT(*) AS stock FROM products WHERE cat_name=?", category[0].categoryName,
+          (er,re)=>{
+            if(er)
+            {
+             res.status(501).send(er.message);
+            }
+          
+        conn.query("UPDATE categories SET stock = ? WHERE name=?",
+        [re[0].stock==null?0:re[0].stock,category[0].categoryName],(e,r)=>{
+          if(e)
+          {
+           res.status(400).json({ message: e.message });
+          }
           res.status(201).json(result);
     });
   });
+});
+});  
+});
 
   // UPDATE SUBCATEGORY
   router.patch("/",async(req,res)=>{

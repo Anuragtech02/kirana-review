@@ -55,7 +55,10 @@ router.get("/user/:userId", async(req,res)=>{
 // CREATE REVIEW 
 
 router.post("/create",async(req,res)=>{
-    const newReview = await conn.query("INSERT INTO reviews SET ?",
+
+  
+   
+    const newReview =  conn.query("INSERT INTO reviews SET ?",
     createReviewQuery(
         req.body.productId,
         req.body.userId,
@@ -121,8 +124,9 @@ router.post("/create",async(req,res)=>{
            //console.log(re[0].avg );
         });
       }
-    })
-  })
+    });
+  });
+
   
  
 

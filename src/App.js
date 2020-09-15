@@ -22,7 +22,14 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+   
+    window.scrollTo(
+      {
+        top: 0,
+        behavior: "instant"
+      }
+    );
+
   }, [pathname]);
 
   return null;
@@ -66,7 +73,7 @@ const App = () => {
       />
     );
   };
-  const productWithName = ({ match }) => {
+  const ProductWithName = ({ match }) => {
     return (
       <CategorizedProduct
         products={products.filter(
@@ -78,7 +85,7 @@ const App = () => {
   return (
     <SearchContextProvider>
       <Router>
-        <ScrollToTop />
+     <ScrollToTop/>
         <div className={styles.navbar} id="navbar">
           <Navbar />
         </div>
@@ -89,7 +96,7 @@ const App = () => {
           <Route path="/signup" component={Signup} />
           <Route path="/signupbase" component={SignupBase} />
           <Route path="/Review/:id" exact component={ReviewWithId} />
-          <Route path="/categories/:name" exact component={productWithName} />
+          <Route path="/categories/:name" exact component={ProductWithName} />
           <Route path="/search/:keyword" exact component={Search} />
           <Route path="/categories" component={Categories} />
           <Route path="/addProduct" component={AddProduct} />

@@ -78,6 +78,8 @@ router.get("/subcategory/:subcat_name", async (req, res) => {
 //Create Product
 
 router.post("/create", async (req, res) => {
+
+  
  const newProduct = await conn.query(
  "INSERT INTO products SET ?",
     createProductQuery(
@@ -96,7 +98,7 @@ router.post("/create", async (req, res) => {
     (err, result) => {
      
       if (err) {
-        res.status(400).json({ message: err.message });
+        res.status(400).json({ "message": err.message });
       }
       
       
@@ -112,7 +114,7 @@ router.post("/create", async (req, res) => {
       [re[0].stock==null?0:re[0].stock,req.body.cat_name],(e,r)=>{
         if(e)
         {
-         res.status(400).json({ message: e.message });
+         res.status(400).json({ "message": e.message });
         }
         res.status(201).json(`${req.body.name} added successfully!`);
        })
@@ -122,6 +124,7 @@ router.post("/create", async (req, res) => {
     }
   );
 });
+
 
 //Update Product
 router.patch("/", async (req, res) => {
@@ -149,7 +152,7 @@ router.patch("/", async (req, res) => {
       [req.body.name, req.body.price, req.body.image,req.body.description,req.body.priceDetails,req.body.totalReviews,req.body.avgRating,req.body.krRating,req.body.reviews,req.body.cat_name,req.body.subcat_name ,req.body.id],
       (err, result) => {
         if (err) {
-          res.status(501).send(err.message);
+          res.status(501).json({"message":err.message});
         }
          // UPTATE TOTAL PRODUCTS IN CATEGORIES TABLE 
         if(results[0].catName != req.body.cat_name)
@@ -158,27 +161,27 @@ router.patch("/", async (req, res) => {
           (er,re)=>{
             if(er)
             {
-             res.status(501).send(er.message);
+             res.status(501).json({"message":er.message});
             }
           
-        conn.query("UPDATE categories SET stock = ? WHERE categoryName=?",
+        conn.query("UPDATE categories SET stock = ? WHERE name=?",
         [re[0].stock1==null?0:re[0].stock1,req.body.cat_name],(e,r)=>{
           if(e)
           {
-           res.status(400).json({ message: e.message });
+           res.status(400).json({ "message": e.message });
           }
           const stock2 = conn.query("SELECT COUNT(*) AS stock2 FROM products WHERE cat_name=?",results[0].catName,
           (er,re)=>{
             if(er)
             {
-             res.status(501).send(er.message);
+             res.status(501).json({"message":er.message});
             }
           
-        conn.query("UPDATE categories SET stock = ? WHERE categoryName=?",
+        conn.query("UPDATE categories SET stock = ? WHERE name=?",
         [re[0].stock2==null?0:re[0].stock2,results[0].catName],(e,r)=>{
           if(e)
           {
-           res.status(400).json({ message: e.message });
+           res.status(400).json({ "message": e.message });
           }
            
          })
@@ -186,7 +189,7 @@ router.patch("/", async (req, res) => {
          })
         })
       }
-        res.status(202).json(result);
+        res.status(202).send(result);
   });
 });
 });
@@ -198,7 +201,7 @@ router.delete("/", async (req, res) => {
       "DELETE FROM products WHERE id = ?", req.body.id,
       (err, result) => {
         if (err) {
-          res.status(501).send(err.message);
+          res.status(501).json({"message":err.message});
         }
        
          // UPTATE TOTAL PRODUCTS IN CATEGORIES TABLE
@@ -206,14 +209,14 @@ router.delete("/", async (req, res) => {
          (er,re)=>{
            if(er)
            {
-            res.status(501).send(er.message);
+            res.status(501).json({"message":er.message});
            }
          
        conn.query("UPDATE categories SET stock = ? WHERE name=?",
        [re[0].stock==null?0:re[0].stock,req.body.cat_name],(e,r)=>{
          if(e)
          {
-          res.status(400).json({ message: e.message });
+          res.status(400).json({ "message": e.message });
          }
           res.status(200).json("deleted successfully");
         })
