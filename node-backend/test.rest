@@ -1,28 +1,45 @@
-GET http://localhost:5000/api/products
+GET         http://localhost:5000/api/categories
 
 
 ###
-DELETE         http://localhost:5000/api/reviews
+POST   http://localhost:5000/api/products/create
 Content-Type: application/json
 
 {
-     "id": "bf7109a1-85e4-4280-9571-8af878f1611b",
-    "rating": 4,
-    "review": "tempting",
-    "userId": "123",
-    "productId":"6585ba92-eec8-4308-9e21-cef1ab5f2ae4",
-    "image": ""
-    
-    
+   "name": "choco lava" ,
+       "image": "imageURL" ,
+       "price": 50 ,
+       "cat_name" :"bakery" ,
+       "description" : "soft" ,
+      "priceDetails" : "{\"size\": 1, \"price\":50}",
+        "subcat_name" : "cakes",
+        "avgRating" : 0,
+        "krRating" : 0,
+        "totalReviews" : 0,
+        "reviews" : "[]"
 }
+
 ###
-POST   http://localhost:5000/api/reviews/create
+
+GET http://localhost:5000/api/search/ la 
+
+###
+PATCH  http://localhost:5000/api/reviews
 Content-Type: application/json
 
 {
-    "productId":"6585ba92-eec8-4308-9e21-cef1ab5f2ae4",
-    "userId" : "123",
-    "rating" : 3,
-    "review" : "not bad",
+   "id" : "0dda89a1-b565-40a3-8218-e5506b00d587",
+   "productId": "1a700140-c298-4f80-8097-3cc972aedfcf",
+    "userId" : "1234",
+    "rating" : 5,
+    "review" : "good quality milk",
     "image" : ""
 }
+###
+POST     http://localhost:5000/api/subcategories/create
+Content-Type: application/json
+
+{
+   "name" : "milk",
+   "categoryName" : "dairy"
+}  

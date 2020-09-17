@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Categories.module.css';
-import {Card, Grid, Collapse} from '@material-ui/core';
+import {Card, Grid, Collapse, CircularProgress} from '@material-ui/core';
 import {categories} from "../../Shared/Products";
 import {ExpandMore , ExpandLess} from '@material-ui/icons';
 import {Link} from "react-router-dom";
@@ -9,14 +9,23 @@ export const Categories = ()=>{
 
     const [click, setClick]=React.useState({});
 
+    const[loading , setLoading] = React.useState(true);
+
+    React.useEffect(()=>{
+      setTimeout(()=>{
+        setLoading(false); 
+       
+      } , 1000); 
+    }, []);
+
    function handleClick( id)
    {
        setClick(prev=>({...prev , [id]:!prev[id]}));
-       console.log(click[id]);
+       
        
    }
 
-    return(
+    return  !loading ?( 
         <div className={styles.container}>
           <h1>Categories</h1>
           <div className={styles.categoryBox}>
@@ -53,6 +62,6 @@ export const Categories = ()=>{
              })} </Grid>
           </div>
         </div>
-    )
+    ):<div className={styles.loader}><CircularProgress  /></div>;
 }
 export default Categories;

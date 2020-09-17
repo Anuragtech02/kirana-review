@@ -4,6 +4,7 @@ import { TextField, Button } from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
 import SearchContext from "../../Context/searchContext";
 import debounce from 'lodash.debounce'
+import axios from "axios";
 
 const AddProduct = () => {
   const { AddProduct, setAddProduct } = React.useContext(SearchContext);
@@ -36,19 +37,42 @@ const AddProduct = () => {
     console.log("Timer...")
   },1000)
 
-    
+    const postProduct = (Arr)=>{
+
+      axios({
+        method : "POST",
+        url : "http://localhost:5000/api/products/create",
+        data : JSON.stringify(Arr),
+        headers : {"Content-Type" : "application/json"},
+        
+      })
+      .then((response)=>{
+         console.log(response);
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+    }
 
   const handleAdd = (event) => {
     event.preventDefault();
     var Arr =
-      { Product_Name: product ,
-       Image_URL: imageURL ,
+      { name: product ,
+       image: imageURL ,
        price ,
-       category ,
-       description };
+       cat_name :category ,
+       description ,
+      priceDetails : JSON.stringify({"size": 1 , "price" : 50 }),
+        subcat_name : "bagel",
+        avgRating : 0,
+        krRating : 0,
+        totalReviews : 0,
+        reviews : "[]"
+      };
     setAddProduct([...AddProduct, Arr]);
     console.log("Add Product",AddProduct);
-    setState(Arr);
+     setState(Arr);
+     postProduct(Arr);
   };
   return (
     <div className={styles.container}>

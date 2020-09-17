@@ -14,6 +14,8 @@ const createCategoryQuery = (name,image,stock)=>{
     return data;
 }
 
+// CREATE TABLE
+ 
 //Get ALL CATEGORIES
 
 router.get("/", async (req, res) => {
@@ -28,6 +30,8 @@ router.get("/", async (req, res) => {
 // CREATE CATEGORY
 
 router.post("/create",async(req,res)=>{
+
+     
     const newCategory = await conn.query("INSERT INTO categories SET ?",
     createCategoryQuery(
        req.body.name,
@@ -45,8 +49,9 @@ router.post("/create",async(req,res)=>{
       {
           res.status(201).send(`${req.body.name} added successfully!`) 
       }
-    })
-  })
+    });
+  });
+
 
   //delete Category
   router.delete("/", async (req, res) => {

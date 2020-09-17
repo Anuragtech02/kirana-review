@@ -1,18 +1,25 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const db = require("./config/db");
 const bodyParser = require("body-parser");
 const productsRotuer = require("./routes/products");
 const categoryRouter = require("./routes/category");
 const subcategoryRouter = require("./routes/subcategory");
 const reviewsRouter = require("./routes/reviews");
+const searchRouter = require("./routes/search");
+const table = require("./config/table");
 
 dotenv.config({ path: "./config/config.env" });
 
 db.connectDB();
+table.createCategoryTable();
+table.createSubcategoryTable();
+table.createProductsTable();
+table.createReviewTable();
 
 const app = express();
-
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -42,3 +49,4 @@ app.use("/api/products", productsRotuer);
 app.use("/api/categories", categoryRouter);
 app.use("/api/subcategories", subcategoryRouter);
 app.use("/api/reviews", reviewsRouter);
+app.use("/api/search" , searchRouter);

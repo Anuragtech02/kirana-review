@@ -21,14 +21,17 @@
             text-align: center;
             text-transform: uppercase;
             padding: 20px 30px;
-            .imageContainer{
+           
+         .imageContainer{
          display:flex;
          justify-content: center;
          align-items: center;
          padding: 20px 30px;
+         height: 200px;
+
                img{
-                   min-width:180px;
-                   height: 180px;
+                   max-width:200px;
+                   
               }
             }
             .title{
@@ -71,3 +74,14 @@
             
         
     }
+    .loader{
+
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+ 
+   }
+   

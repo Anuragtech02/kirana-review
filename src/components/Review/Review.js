@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Review.module.css";
 import Rating from '@material-ui/lab/Rating';
-import {TextField , Avatar , Collapse , Modal , Backdrop , Fade} from '@material-ui/core';
+import {TextField , Avatar , Collapse , Modal , Backdrop , Fade, CircularProgress } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import {MultipleSlider} from "../../components";
 
@@ -67,6 +67,8 @@ const RenderReview=({reviews})=>{
 
 export const Review = (props) => {
  
+  
+ 
   const[Form , setForm]=React.useState({
     name:"",
     rating:2,
@@ -74,6 +76,18 @@ export const Review = (props) => {
     file:null,
     
   })
+ 
+  const[loading , setLoading] = React.useState(true);
+
+  React.useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false); 
+     
+    } , 1000); 
+  }, []);
+
+    
+
   const handleChange=(event)=>{
     const {name , value} = event.target;
     
@@ -109,7 +123,7 @@ export const Review = (props) => {
     setOpen(false)
   }
   
-  return (
+  return !loading ?(
 <div className={styles.container}>
   <div className={styles.flowLeft}>
       <div className={styles.imgContainer} >
@@ -124,9 +138,9 @@ export const Review = (props) => {
          readOnly
         />(KR Rating)</h6>
         <h6><Rating name="half-rating-read" size="small" defaultValue={2.5} precision={0.5} readOnly />(Customers Rating)</h6>
-        <h6><strong>Category: </strong>{props.product.category}</h6>
-          <h6><strong>Description: </strong>{props.product.description}</h6>
-          <h6><strong>Price: </strong>₹{props.product.price}</h6>
+        <h6><strong>Category : </strong>{props.product.category}</h6>
+          <h6><strong>Description : </strong>{props.product.description}</h6>
+          <h6><strong>Price : </strong>₹{props.product.price}</h6>
           <button onClick={toggleTable}>More about prices</button>
 
          <Collapse in={isTableExpanded}><table>
@@ -229,6 +243,6 @@ export const Review = (props) => {
          
 
     </div>
-  );
+  ): <div className={styles.loader}><CircularProgress /></div>;
 };
 export default Review;

@@ -6,8 +6,8 @@
 }
 
 .sliderBase img {
-  width: 160px !important;
   height: 160px !important;
+  width: 160px !important;
   border-radius: 80px !important;
   -webkit-border-radius: 80px !important;
   -moz-border-radius: 80px !important;
