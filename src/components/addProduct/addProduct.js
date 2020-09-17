@@ -1,157 +1,274 @@
 import React from "react";
 import styles from "./AddProduct.module.css";
-import { TextField, Button } from "@material-ui/core";
+import {
+  TextField,
+  Button,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Typography,
+} from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
 import SearchContext from "../../Context/searchContext";
-import debounce from 'lodash.debounce'
-import axios from "axios";
+import debounce from "lodash.debounce";
+import Categories from "../Categories/Categories";
+import Rating from "@material-ui/lab/Rating";
+import ResponsiveFontSizes from "./ResponsiveTypography";
 
 const AddProduct = () => {
-  const { AddProduct, setAddProduct } = React.useContext(SearchContext);
-  const [price,setPrice] = React.useState(0);
-  const [category,setCategory] = React.useState("");
-  const [description,setDescription] = React.useState("");
-  const [product,setproduct] = React.useState("");
+  const {
+    AddProduct,
+    setAddProduct,
+    categories,
+    subCategories,
+  } = React.useContext(SearchContext);
+  const [price, setPrice] = React.useState(0);
+  const [category, setCategory] = React.useState("");
+  const [rating, setRating] = React.useState(2);
+  const [subCategory, setSubCategory] = React.useState("");
+  const [NewSubCategory, setNewSubCategory] = React.useState();
+  const [NewCategory, setNewCategory] = React.useState();
+  const [description, setDescription] = React.useState("");
+  const [product, setproduct] = React.useState("");
   const [imageURL, setImageURL] = React.useState("");
   const [State, setState] = React.useState("");
   const [image, setImage] = React.useState(false);
+  const [Quantity, setQuantity] = React.useState("");
+  const ListofCategories = categories;
+  const ListofSubCategories = subCategories;
 
   let Timeout;
 
   const ImageURL = (event) => {
     // clearTimeout(Timeout)
-    setImageURL(event.target.value)
+    setImageURL(event.target.value);
     // Timeout = setTimeout(()=>{
     //   setImage(true)
     //   console.log("Timer...")
     // },1000);
-    const debounceValue = debounce( () =>{
-      setImage(true);
-      console.log("Timer...")
-    },1000)
-    debounceValue();
+    setImage(false);
+    debounceValue(event.target.value);
   };
 
-  const debounceValue = debounce( () =>{
-    setImage(true);
-    console.log("Timer...")
-  },1000)
-
-    const postProduct = (Arr)=>{
-
-      axios({
-        method : "POST",
-        url : "http://localhost:5000/api/products/create",
-        data : JSON.stringify(Arr),
-        headers : {"Content-Type" : "application/json"},
-        
-      })
-      .then((response)=>{
-         console.log(response);
-      })
-      .catch((err)=>{
-        console.log(err);
-      })
-    }
+  const debounceValue = React.useRef(
+    debounce((url) => {
+      setImage(true);
+    }, 1000)
+  ).current;
 
   const handleAdd = (event) => {
     event.preventDefault();
-    var Arr =
-      { name: product ,
-       image: imageURL ,
-       price ,
-       cat_name :category ,
-       description ,
-      priceDetails : JSON.stringify({"size": 1 , "price" : 50 }),
-        subcat_name : "bagel",
-        avgRating : 0,
-        krRating : 0,
-        totalReviews : 0,
-        reviews : "[]"
-      };
+    var Arr = {
+      Product_Name: product,
+      Image_URL: imageURL,
+      price,
+      category,
+      description,
+      Quantity,
+      NewCategory,
+      NewSubCategory,
+      subCategory,
+      rating,
+    };
     setAddProduct([...AddProduct, Arr]);
-    console.log("Add Product",AddProduct);
-     setState(Arr);
-     postProduct(Arr);
+    console.log("Add Product", AddProduct);
+    setState(Arr);
   };
+
   return (
-    <div className={styles.container}>
-      <h2 className={styles.addProduct}>Add a New Product</h2>
-      <div className={styles.innerContainer}>
-        <div className={styles.image}>
+    <form className={styles.container} onSubmit={handleAdd}>
+      <ResponsiveFontSizes
+        className={styles.heading}
+        variant="h4"
+        content="Add New Product"
+      />
+      <div className={styles.details}>
+        <div className={styles.uploadImage}>
           {!image ? (
-            <Skeleton variant="rect" height="100%" width="100%" />
+            <div className={styles.mainImageSkeleton}>Upload Image</div>
           ) : (
-            <img src={imageURL} className={styles.img} />
+            <div className={styles.mainImageContainer}>
+              <img src={imageURL} className={styles.mainImage} />
+            </div>
           )}
+          <div className={styles.otherImagesContainer}>
+            <div className={styles.otherImage}></div>
+            <div className={styles.otherImage}></div>
+            <div className={styles.otherImage}></div>
+            <div className={styles.otherImage}></div>
+          </div>
         </div>
-        <form onSubmit={handleAdd}>
-          <div className={styles.details}>
+        <div className={styles.info}>
+          <TextField
+            variant="outlined"
+            label="Product Name"
+            size="small"
+            className={styles.ProductName}
+            required
+            onChange={(event) => {
+              setproduct(event.target.value);
+            }}
+            id="ProductName"
+            value={product}
+          />
+          <TextField
+            variant="outlined"
+            label="Image URL"
+            size="small"
+            className={styles.ImageURL}
+            required
+            onChange={ImageURL}
+            id="ImageURL"
+            value={imageURL}
+          />
+          <div className={styles.PriceandQuantity}>
             <TextField
               variant="outlined"
-              label="Product Name"
+              label="Price"
               size="small"
-              className={styles.ProductName}
+              className={styles.Price}
+              onChange={(event) => {
+                setPrice(parseInt(event.target.value));
+              }}
               required
-              onChange={ (event) =>{ setproduct(event.target.value)}}
-              id="ProductName"
-              value={product}
+              id="Price"
+              value={price}
+              type="number"
             />
             <TextField
               variant="outlined"
-              label="Image URL"
+              label="Quantity"
               size="small"
-              className={styles.ProductName}
+              className={styles.Quantity}
               required
-              onChange={ImageURL}
-              id="ImageURL"
-              value={imageURL}
+              id="Quantity"
+              onChange={(event) => {
+                setQuantity(event.target.value);
+              }}
+              value={Quantity}
             />
-            <div className={styles.PriceandCategory}>
-              <TextField
-                variant="outlined"
-                label="Price"
+          </div>
+          <div className={styles.CategoryAndSubCategory}>
+            <FormControl
+              required
+              variant="outlined"
+              className={styles.Category}
+            >
+              <InputLabel id="demo-simple-select-outlined-required-label">
+                Category
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-required-label"
+                id="demo-simple-select-required-outlined"
+                value={category}
+                onChange={(event) => {
+                  setCategory(event.target.value);
+                }}
+                label="Category"
                 size="small"
-                className={styles.Price}
-                onChange={ (event) =>{ setPrice(event.target.value)}}
-                required
-                id="Price"
-                value={price}
-                type='number'
-              />
+              >
+                {ListofCategories.map((category) => {
+                  return (
+                    <MenuItem value={category.value}>{category.name}</MenuItem>
+                  );
+                })}
+              </Select>
+            </FormControl>
+            <FormControl
+              required
+              variant="outlined"
+              className={styles.SubCategory}
+            >
+              <InputLabel id="demo-simple-select-outlined-label">
+                Sub Category
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                value={category === "Other.." ? "Other.." : subCategory}
+                onChange={(event) => {
+                  category === "Other.."
+                    ? setSubCategory(category)
+                    : setSubCategory(event.target.value);
+                }}
+                inputProps={{ readOnly: category === "Other.." }}
+                label="Sub Category"
+                size="small"
+              >
+                {ListofSubCategories.map((Subcategory) => {
+                  return (
+                    <MenuItem value={Subcategory.value}>
+                      {Subcategory.name}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
+            </FormControl>
+          </div>
+          {category === "Other.." ? (
+            <div className={styles.NewCategoryAndNewSubCategory}>
               <TextField
                 variant="outlined"
                 label="Category"
                 size="small"
-                className={styles.Category}
+                className={styles.NewCategory}
+                onChange={(event) => {
+                  setNewCategory(event.target.value);
+                }}
                 required
-                id="Category"
-                onChange={ (event) =>{ setCategory(event.target.value)}}
-                value={category}
+                id="first"
+                value={NewCategory}
+              />
+              <TextField
+                variant="outlined"
+                label="Sub Category"
+                size="small"
+                className={styles.NewSubCategory}
+                required
+                id="SubCategory"
+                onChange={(event) => {
+                  setNewSubCategory(event.target.value);
+                }}
+                value={NewSubCategory}
               />
             </div>
-            <TextField
-              variant="outlined"
-              label="Description"
-              size="small"
-              className={styles.Description}
-              rowsMax={2}
-              multiline
-              id="Description"
-              onChange={ (event) =>{ setDescription(event.target.value)}}
-              value={description}
+          ) : (
+            <div style={{ display: "none" }}></div>
+          )}
+          <div className={styles.ratings}>
+            <p>KR RATING</p>
+            <Rating
+              id="rating"
+              name="simple-controlled"
+              value={rating}
+              onChange={(event) => setRating(parseInt(event.target.value))}
+              size="medium"
             />
-            <Button
-              className={styles.addBtn}
-              fullWidth
-              type="submit"
-            >
-              ADD
-            </Button>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
+      <div className={styles.description}>
+        <TextField
+          variant="outlined"
+          label="Description"
+          size="small"
+          className={styles.Description}
+          rowsMax={5}
+          multiline
+          id="Description"
+          onChange={(event) => {
+            setDescription(event.target.value);
+          }}
+          value={description}
+          fullWidth
+          rows={4}
+        />
+      </div>
+      <Button className={styles.addBtn} type="submit">
+        ADD
+      </Button>
+    </form>
   );
 };
 

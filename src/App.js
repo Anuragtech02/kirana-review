@@ -38,8 +38,8 @@ function ScrollToTop() {
 const App = () => {
   function setBackground() {
     if (
-      document.body.scrollTop > 200 ||
-      document.documentElement.scrollTop > 200
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       document.getElementById("navbar").style.background = "white";
       document.getElementById("navbar").style.boxShadow =
